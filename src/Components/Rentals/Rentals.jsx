@@ -19,7 +19,7 @@ console.log("data:",data)
   return (
     <div className="rentalContainer">
       <div className="sortingButtons">
-        <button className="sortById">Sort by ID</button>
+        <button className="sortById" >Sort by ID</button>
         <button className="sortByRentAsc">Rent Low to high</button>
         <button className="sortByRentDesc">Rent High to low</button>
         <button className="sortByAreaAsc">Area Low to high</button>
@@ -47,7 +47,7 @@ console.log("data:",data)
           {data.map((house, index) => {
             return (
               <tr key={house.id} className="houseDetails">
-                <td className="houseId">{index+1}</td>
+                <td className="houseId">{house.id}</td>
                 <td className="houseName">{house.name} </td>
                 <td className="ownersName">{house.ownerName}</td>
                 <td className="address">{house.address}</td>

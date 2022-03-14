@@ -28,7 +28,7 @@
         "address": "Indore",
         "areaCode": "452010",
         "rent": "400",
-        "bachelor": "bachelor",
+        "bachelor": "Bachelor",
         "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/suburban-house-royalty-free-image-1584972559.jpg",
         "id": 1
       },
@@ -38,7 +38,7 @@
         "address": "Indore",
         "areaCode": "452010",
         "rent": "8000",
-        "married": "married",
+        "married": "Married",
         "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/suburban-house-royalty-free-image-1584972559.jpg",
         "id": 2
       }
