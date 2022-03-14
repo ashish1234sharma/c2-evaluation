@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Rentals } from "./Components/Rentals/Rentals";
+import { AddHouse } from "./Components/AddHouse/AddHouse";
+import {useState} from "react"
+ 
 function App() {
+const [state,setState]=useState("show");
+
+const handleChange = () => {
+  if(state==="add"){
+    setState("show")
+  }else if(state==="show"){
+    setState("add")
+  }
+  console.log(state)
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button className="toggleForm" onClick={handleChange}>
+      {state==="show" ? "Add House" : "Show Rentals"}
+        {/* Show text Add House or Show Rentals based on state */}
+      </button>
+      {state==="show" ? <Rentals/> : <AddHouse/>}
+      {/* Show component based on state */}
+      <br />
     </div>
   );
 }

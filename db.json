@@ -1,0 +1,46 @@
+{
+  "houses": [
+    {
+      "name": "KBG",
+      "ownerName": "Ajit",
+      "address": "Indore",
+      "areaCode": "452001",
+      "rent": "1235",
+      "bachelor": "bachelor",
+      "married": "married",
+      "image": "https://i.pinimg.com/564x/77/4a/0c/774a0cb09e5f59c351c7221667a77acf.jpg",
+      "id": 5
+    },
+    {
+      "name": "KBG",
+      "ownerName": "Choubey",
+      "address": "Indore",
+      "areaCode": "452010",
+      "rent": "80000",
+      "bachelor": "bachelor",
+      "married": "married",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/suburban-house-royalty-free-image-1584972559.jpg",
+      "id": 6
+    },
+    {
+        "name": "KBG",
+        "ownerName": "Choubey",
+        "address": "Indore",
+        "areaCode": "452010",
+        "rent": "400",
+        "bachelor": "bachelor",
+        "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/suburban-house-royalty-free-image-1584972559.jpg",
+        "id": 1
+      },
+      {
+        "name": "KBG",
+        "ownerName": "Choubey",
+        "address": "Indore",
+        "areaCode": "452010",
+        "rent": "8000",
+        "married": "married",
+        "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/suburban-house-royalty-free-image-1584972559.jpg",
+        "id": 2
+      }
+  ]
+}
