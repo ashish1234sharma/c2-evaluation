@@ -5,25 +5,36 @@ export const Rentals = () => {
 const [data,setData] = useState([]);
 
 useEffect(() => {
-  getData(data)
+  getData()
 },[])
 
-const getData = (e) => {
-  
+const getData = (e) => { 
   fetch("http://localhost:8080/houses").then((res) => (res.json())).then((data) => 
-  {console.log(data) 
+  {
+    // console.log(data) 
   setData(data) })
 }
 
-console.log("data:",data)
+const handleSort = (field, ascending=true) => {
+ const sortData = data.sort((a, b) => {
+   if (ascending) {
+     return a[field] - b[field]
+   }
+   return b[field] - a[field]
+ })
+//  console.log(sortData)
+ setData([...sortData])
+}
+console.log({data})
+
   return (
     <div className="rentalContainer">
       <div className="sortingButtons">
-        <button className="sortById" >Sort by ID</button>
-        <button className="sortByRentAsc">Rent Low to high</button>
-        <button className="sortByRentDesc">Rent High to low</button>
-        <button className="sortByAreaAsc">Area Low to high</button>
-        <button className="sortByAreaDesc">Area High to Low</button>
+        <button className="sortById" onClick={() => handleSort('id')}>Sort by ID</button>
+        <button className="sortByRentAsc" onClick={() => handleSort('rent')}>Rent Low to high</button>
+        <button className="sortByRentDesc" onClick={() => handleSort('rent', false)}>Rent High to low</button>
+        <button className="sortByAreaAsc" onClick={() => handleSort('areaCode')}>Area Low to high</button>
+        <button className="sortByAreaDesc" onClick={() => handleSort('areaCode', false)}>Area High to Low</button>
       </div>
       <input
         className="searchAddress"
